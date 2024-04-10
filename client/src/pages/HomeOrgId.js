@@ -39,7 +39,7 @@ const HomeWithOrgId = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        `${process.env.REACT_APP_SERVER}}/tournaments/tournaments/${tournamentId}`,
+        `${process.env.REACT_APP_SERVER}/tournaments/tournaments/${tournamentId}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       setSelectedTournament(response.data);
@@ -112,7 +112,7 @@ const HomeWithOrgId = () => {
       const response = await axios.post(
         `${process.env.REACT_APP_SERVER}/tournaments/announce/${tournamentId}`,
         null,
-        { headers: { Authorization: `Bearer ${token}` } }
+        //{ headers: { Authorization: `Bearer ${token}` } }
       );
       console.log("Reminder sent successfully");
     } catch (error) {
