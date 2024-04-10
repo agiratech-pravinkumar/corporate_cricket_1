@@ -95,12 +95,12 @@ const HomeWithOrgId = () => {
         setTournaments(response.data.tournaments);
       } catch (error) {
         console.error("Error fetching tournaments:", error);
-        if (error.response && error.response.status >= 400) {
-          window.location.href = "/forbidden";
-        } else {
+        // if (error.response && error.response.status >= 400) {
+        //   window.location.href = "/forbidden";
+        // } else {
          
-          window.location.replace(`/login`);
-        }
+        //   window.location.replace(`/login`);
+        // }
       }
     };
     fetchTournaments();
