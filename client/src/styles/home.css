@@ -1,0 +1,87 @@
+
+.page-title{
+  color: white;
+}
+
+.bg{
+  background-image: url("../images/banner.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.search-container {
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.search-container #searchInput {
+  margin-right: 10px;
+}
+
+.match-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Align cards from left to right */
+}
+
+.matchCard {
+  color: black;
+  width: calc(31%);
+  margin: 1%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  height: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.8); /* Transparent background */
+}
+
+.matchCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgb(91, 211, 70);
+}
+
+.toss-info {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #000000;
+  background-color: rgb(251, 253, 255);
+}
+
+.tournament-id {
+  text-align: center;
+  color: #000000;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.match-date,
+.team-info,
+.score-info {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bolder;
+  font-size: 1.4em;
+}
+
+.team-runs {
+  background-color:rgb(235, 209, 12);
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.team-runs span {
+  color: #000000;
+  padding: 5px 10px;
+  border-radius: 5px;
+}

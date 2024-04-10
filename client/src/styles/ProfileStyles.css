@@ -1,0 +1,48 @@
+/* ProfileStyles.css */
+.home .profileTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .home .profileTable td,
+  .home .profileTable th {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+  }
+  
+  .home .profileTable th {
+    background-color: #60af4c;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .home .profileTable td {
+    background-color: #f2f2f2;
+    color: #333333;
+  }
+  
+  .home .profileTable tr:hover td {
+    background-color: #ff0000;
+    cursor: pointer;
+  }
+  
+  .home .profileTable h2 {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #4CAF50;
+  }
+  
+  .home .profileTable ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .home .profileTable ul li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #333;
+  }
+  

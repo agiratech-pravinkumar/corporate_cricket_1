@@ -1,0 +1,45 @@
+/* Contact Page Styles */
+.contact-container {
+    margin-top: 0vh;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(255, 255, 255); /* Set background color to black */
+  }
+  
+  .contact-header {
+    font-weight: bold;
+    margin-bottom: 50px;
+    font-size: 2rem;
+    color: #002fff; /* Set text color to green */
+  }
+  
+  .contact-content {
+    text-align: justify;
+    line-height: 1.6;
+    color: rgb(255, 0, 0); /* Set text color to white */
+  }
+  
+  .contact-details {
+    width: 600px;
+    margin: 40 auto;
+  }
+  
+  .contact-table {
+    width: 100%;
+  }
+  
+  .contact-table th {
+    background-color: rgb(189, 48, 48);
+    color: white;
+    padding: 10px;
+  }
+  
+  .contact-table td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .contact-icon {
+    padding-top: 5px;
+  }
+  
