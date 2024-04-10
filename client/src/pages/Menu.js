@@ -33,7 +33,7 @@ const Menu = () => {
   const [sortByEndDate, setSortByEndDate] = useState(null); 
 
   useEffect(() => {
-    Axios.get("http://localhost:3700/tournaments/tournaments/")
+    Axios.get(`${process.env.REACT_APP_SERVER}/tournaments/tournaments/`)
       .then((res) => setTournament(res.data))
       .catch((err) => {
         console.log(`${err} is going on`);
@@ -68,7 +68,7 @@ const Menu = () => {
   const handleDetails = async (tournamentId) => {
     try {
       const response = await Axios.get(
-        `http://localhost:3700/tournaments/tournaments/${tournamentId}`
+        `${process.env.REACT_APP_SERVER}/tournaments/tournaments/${tournamentId}`
       );
       setSelectedTournament(response.data);
       setShowDetailsModal(true);

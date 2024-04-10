@@ -25,7 +25,7 @@ const SignUpForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    Axios.post("http://localhost:3700/register", { organization_name, email, password, confirm_password })
+    Axios.post(`${process.env.REACT_APP_SERVER}/register`, { organization_name, email, password, confirm_password })
       .then((res) => {
         toast.success("Registration Successful", { autoClose: 5000 });
         window.location.replace(`/login`);

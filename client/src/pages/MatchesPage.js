@@ -15,7 +15,7 @@ function MatchesPage() {
   const [upcomingMatches, setUpcomingMatches] = useState([]);
 
   useEffect(() => {
-    axios.get(`http://localhost:3700/tournaments/matches/${tournamentId}`)
+    axios.get(`${process.env.REACT_APP_SERVER}/tournaments/matches/${tournamentId}`)
       .then(response => {
         setMatches(response.data);
       })

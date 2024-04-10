@@ -24,7 +24,7 @@ function LoginForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await Axios.post("http://localhost:3700/login", { organization_id, password });
+      const response = await Axios.post(`${process.env.REACT_APP_SERVER}/login`, { organization_id, password });
       console.log("Login response:", response);
       if (response.status === 200) {
         const { token } = response.data; // Extract token from response

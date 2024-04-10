@@ -39,7 +39,7 @@ const HomeWithOrgId = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        `http://localhost:3700/tournaments/tournaments/${tournamentId}`,
+        `${process.env.REACT_APP_SERVER}}/tournaments/tournaments/${tournamentId}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       setSelectedTournament(response.data);
@@ -52,7 +52,7 @@ const HomeWithOrgId = () => {
     try {
       const token = localStorage.getItem("jwtToken");
       const response = await axios.get(
-        `http://localhost:3700/tournaments/matches/${tournamentId}`,
+        `${process.env.REACT_APP_SERVER}/tournaments/matches/${tournamentId}`,
         { headers: { Authorization: `Bearer ${token}` } }
       );
       console.log("Matches retrieved successfully:", response.data);
@@ -70,7 +70,7 @@ const HomeWithOrgId = () => {
     try {
       const token = localStorage.getItem("jwtToken");
       const response = await axios.post(
-        `http://localhost:3700/tournaments/matches/${tournamentId}`,
+        `${process.env.REACT_APP_SERVER}/tournaments/matches/${tournamentId}`,
         null,
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -85,7 +85,7 @@ const HomeWithOrgId = () => {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          `http://localhost:3700/home/${organization_id}`,
+          `${process.env.REACT_APP_SERVER}/${organization_id}`,
           {
             headers: { authorization: `Bearer ${token}` },
           }
@@ -110,7 +110,7 @@ const HomeWithOrgId = () => {
     try {
       const token = localStorage.getItem("Token");
       const response = await axios.post(
-        `http://localhost:3700/tournaments/announce/${tournamentId}`,
+        `${process.env.REACT_APP_SERVER}/tournaments/announce/${tournamentId}`,
         null,
         { headers: { Authorization: `Bearer ${token}` } }
       );

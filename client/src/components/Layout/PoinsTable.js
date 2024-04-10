@@ -13,7 +13,7 @@ export default function PoinsTable(props) {
     const currentTournamentID = props.tournamentId
     console.log("Curent : " + currentTournamentID);
     useEffect(()=>{
-            axios.get(`http://localhost:3700/tournaments/getPointsTable/${currentTournamentID}`)
+            axios.get(`${process.env.SERVER}/tournaments/getPointsTable/${currentTournamentID}`)
             .then((res)=>{
                 console.log(res.data);
                 setTeamStatistics(res.data.teamStatistics)

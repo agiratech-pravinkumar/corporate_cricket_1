@@ -12,7 +12,7 @@ function JoinTournamentForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    Axios.post('http://localhost:3700/tournaments/Jointournaments', { tournamentId, teamName, organizationEmail })
+    Axios.post('${process.env.REACT_APP_SERVER}/tournaments/Jointournaments', { tournamentId, teamName, organizationEmail })
       .then((res) => {
         toast.success('Successfully joined the tournament');
         console.log(`Data Saved ${res.data}`);

@@ -31,7 +31,7 @@ function UpdateTournament({ matchId }) {
     const fetchMatch = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3700/tournaments/${currentMatchId.matchId}/`
+          `${process.env.REACT_APP_SERVER}/tournaments/${currentMatchId.matchId}/`
         );
         console.log("API Response:", response.data);
         const matchData = response.data.match;
@@ -58,7 +58,7 @@ function UpdateTournament({ matchId }) {
   const handleUpdate = () => {
     axios
       .put(
-        `http://localhost:3700/tournaments/matches/update-result/${currentMatchId.matchId}`,
+        `${process.env.REACT_APP_SERVER}tournaments/matches/update-result/${currentMatchId.matchId}`,
         {
           tournamentId: tournamentId,
           team1: team1,

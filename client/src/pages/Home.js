@@ -21,7 +21,7 @@ const Home = () => {
     const fetchMatches = async () => {
       try {
         const response = await fetch(
-          "http://localhost:3700/tournaments/match/allmatches"
+          `${process.env.REACT_APP_SERVER}/tournaments/match/allmatches`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch matches");

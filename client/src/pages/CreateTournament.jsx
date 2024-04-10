@@ -42,7 +42,7 @@ function CreateTournament({ organizationId }) {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3700/tournaments/create_tournament",
+        `${process.env.REACT_APP_SERVER}/tournaments/create_tournament`,
         formData
       );
 
@@ -72,7 +72,7 @@ function CreateTournament({ organizationId }) {
     }
   };
 
-  console.log(organizationId);
+  
 
   return (
     <>

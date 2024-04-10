@@ -13,7 +13,10 @@ import MatchesPage from "./pages/MatchesPage";
 import UpdateTournament from "./pages/UpdateTournament";
 import ForbiddenPage from "./pages/ForbiddenPage";
 function App() {
+
+  console.log("ENV For more information  " + process.env.REACT_APP_SERVER);
   return (
+    <>
     <div>
       <BrowserRouter>
         <Routes>
@@ -27,13 +30,13 @@ function App() {
           <Route path="/home/:organization_id" element={<HomeWithOrgId/>}/>
           <Route path="/forbidden" element={<ForbiddenPage/>} /> 
           <Route path="*" element={<Pagenotfound />} />
-
           <Route path="tournaments/create_tournament" element={<CreateTournament/>}/>
           <Route path="tournaments/matches/:tournamentId" element={<MatchesPage />} />
           <Route path="/tournaments/matches/update-result/:matchId" element={<UpdateTournament />} />
         </Routes>
       </BrowserRouter>
     </div>
+    </>
   );
 }
 
