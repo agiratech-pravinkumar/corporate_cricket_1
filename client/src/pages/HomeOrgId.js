@@ -53,7 +53,7 @@ const HomeWithOrgId = () => {
       const token = localStorage.getItem("jwtToken");
       const response = await axios.get(
         `${process.env.REACT_APP_SERVER}/tournaments/matches/${tournamentId}`,
-        { headers: { Authorization: `Bearer ${token}` } }
+        // { headers: { Authorization: `Bearer ${token}` } }
       );
       console.log("Matches retrieved successfully:", response.data);
     } catch (error) {
@@ -72,7 +72,7 @@ const HomeWithOrgId = () => {
       const response = await axios.post(
         `${process.env.REACT_APP_SERVER}/tournaments/matches/${tournamentId}`,
         null,
-        { headers: { Authorization: `Bearer ${token}` } }
+        // { headers: { Authorization: `Bearer ${token}` } }
       );
       console.log("Matches scheduled successfully:", response.data);
     } catch (error) {
@@ -87,7 +87,7 @@ const HomeWithOrgId = () => {
         const response = await axios.get(
           `${process.env.REACT_APP_SERVER}/${organization_id}`,
           {
-            headers: { authorization: `Bearer ${token}` },
+            // headers: { authorization: `Bearer ${token}` },
           }
         );
         console.log("API Response:", response.data);
