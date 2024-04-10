@@ -1,13 +1,12 @@
 const mongoose = require('mongoose');
+const dotenv = require('dotenv');
+dotenv.config();
 
-const uri = 'mongodb://localhost:27017/cricket'; 
+const uri = process.env.DB_SERVER
 
 const connectToDB = async () => {
     try {
-        const conn = await mongoose.connect(uri, {
-          
-            
-        });
+        const conn = await mongoose.connect(uri);
         console.log("DB is Connected");
         return conn; 
     } catch (err) {
