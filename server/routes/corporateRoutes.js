@@ -18,7 +18,7 @@ router.post('/login',corporateAuth.loginCheck);
 
 
 
-router.get('/home/:organization_id',middleware.verifyToken,corporateAuth.organization);
+router.get('/home/:organization_id',/*middleware.verifyToken,*/corporateAuth.organization);
 
 
 
