@@ -85,7 +85,7 @@ const HomeWithOrgId = () => {
       try {
         const token = localStorage.getItem("token");
         const response = await axios.get(
-          `${process.env.REACT_APP_SERVER}/${organization_id}`,
+          `${process.env.REACT_APP_SERVER}/home/${organization_id}`,
           {
             // headers: { authorization: `Bearer ${token}` },
           }
