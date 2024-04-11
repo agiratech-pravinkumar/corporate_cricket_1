@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "../../styles/testing.css";
+import aboutImage from '../../images/pexels-anil-sharma-16062162.jpg';
+
 
 function MatchCard({ match }) {
 
@@ -96,7 +98,8 @@ function MatchCard({ match }) {
           Update Result
         </Link>
       </div>
-      <img src="https://images.pexels.com/photos/16062162/pexels-photo-16062162/free-photo-of-man-playing-cricket-match.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" className="news-card__image" />
+      <img src={aboutImage} alt="" className="news-card__image" />
+
     </div>
   );
 }
